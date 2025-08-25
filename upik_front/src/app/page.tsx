@@ -1,6 +1,5 @@
 "use client"
 
-import  Main  from "@/app/Main/page";
 import styled from '@emotion/styled'
 
 
@@ -13,7 +12,6 @@ const Appdiv = styled.div`
 export default function Home() {
   return (
     <Appdiv>
-      <Main />
     </Appdiv>
   );
 }
