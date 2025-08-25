@@ -16,7 +16,7 @@ const SpanP = styled.p`
 
 const MainP = styled.p`
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const SubP = styled.p`

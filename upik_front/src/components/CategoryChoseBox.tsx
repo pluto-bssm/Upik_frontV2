@@ -4,6 +4,37 @@ import styled from '@emotion/styled'
 import Image from 'next/image';
 import { UnderBar } from "../app/Library/Images";
 
+
+type Props = {
+  category: string;
+  isOpen?: boolean;
+  setIsOpen?: (isOpen: boolean) => void;
+};
+
+export default function CategoryChoseBox({ category, isOpen, setIsOpen }: Props) {
+  return (
+    <Appdiv>
+    <CatogoryBox>
+        
+        <Category>투표 카테고리 선택</Category>
+
+        <BoxDiv onClick={() => setIsOpen && setIsOpen(!isOpen)}>
+            <CategoryP>{category}</CategoryP>
+            <Image src={UnderBar} alt="underbar" />
+        </BoxDiv>
+
+        <div>
+            {category === "기숙사" && <DesP>학교 기숙사에 관한 내용이 궁금할 때 이 카테고리를 선택해주세요</DesP>}
+            {category === "학교생활" && <DesP>학교 생활에 내용이 궁금할 때 이 카테고리를 선택해주세요</DesP>}
+            {category === "유머" && <DesP>유머유머유머유머유머유머유머유머유머유머유머유머유머유머유머</DesP>}
+        </div>
+        
+        
+    </CatogoryBox>
+    </Appdiv>
+  );
+}
+
 const Appdiv = styled.div`
     width : 100%;
     display: flex;
@@ -50,32 +81,3 @@ const CategoryP = styled.p`
     font-weight : 500;
 
 `
-type Props = {
-  category: string;
-  isOpen?: boolean;
-  setIsOpen?: (isOpen: boolean) => void;
-};
-
-export default function CategoryChoseBox({ category, isOpen, setIsOpen }: Props) {
-  return (
-    <Appdiv>
-    <CatogoryBox>
-        
-        <Category>투표 카테고리 선택</Category>
-
-        <BoxDiv onClick={() => setIsOpen && setIsOpen(!isOpen)}>
-            <CategoryP>학교생활</CategoryP>
-            <Image src={UnderBar} alt="underbar" />
-        </BoxDiv>
-
-        <div>
-            {category === "기숙사" && <DesP>학교 기숙사에 관한 내용이 궁금할 때 이 카테고리를 선택해주세요</DesP>}
-            {category === "학교생활" && <DesP>학교 생활에 내용이 궁금할 때 이 카테고리를 선택해주세요</DesP>}
-            {category === "유머" && <DesP>유머유머유머유머유머유머유머유머유머유머유머유머유머유머유머</DesP>}
-        </div>
-        
-        
-    </CatogoryBox>
-    </Appdiv>
-  );
-}

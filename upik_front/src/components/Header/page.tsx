@@ -7,6 +7,53 @@ import HeaderNavigaion from "../HeaderNavigation/page";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
+
+export default function Header() {
+  const pathname = usePathname();
+  const page = pathname.replace("/", "");
+
+  const router = useRouter();
+
+  switch (page) {
+    case "VoteMake":
+      return (
+        <Headers>
+          <VoteHeaderDiv>
+            <HeaderItems>
+              <VoteIconDiv>
+                <Image src={Back} alt="Search" width={24} height={24} onClick={() => {router.back()}}/>
+                <Image src={Close} alt="User" width={24} height={24} onClick={() => {router.replace("/")}}/>
+              </VoteIconDiv>
+            </HeaderItems>
+          </VoteHeaderDiv>
+        </Headers>
+      );
+    case "Guide":
+      return (
+        <div>
+
+        </div>
+      );
+    default:
+      return (
+        <Headers>
+          <HeaderDiv>
+            <HeaderItems>
+              <Image src={Logo} alt="Logo" width={60} height={50} />
+              <IconDiv>
+                <Image src={Search} alt="Search" width={24} height={24}/>
+                <Image src={Bell} alt="Bell" width={24} height={24}/>
+                <Image src={User} alt="User" width={24} height={24}/>
+              </IconDiv>
+            </HeaderItems>
+          </HeaderDiv>
+          <HeaderNavigaion />
+        </Headers>
+      );
+  }
+}
+
+
 const Headers = styled.div`
   width: 100%;
   display: flex;
@@ -62,48 +109,3 @@ const HeaderItems = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-
-export default function Header() {
-  const pathname = usePathname();
-  const page = pathname.replace("/", "");
-
-  const router = useRouter();
-
-  switch (page) {
-    case "VoteMake":
-      return (
-        <Headers>
-          <VoteHeaderDiv>
-            <HeaderItems>
-              <VoteIconDiv>
-                <Image src={Back} alt="Search" width={24} height={24} onClick={() => {router.back()}}/>
-                <Image src={Close} alt="User" width={24} height={24} onClick={() => {router.replace("/")}}/>
-              </VoteIconDiv>
-            </HeaderItems>
-          </VoteHeaderDiv>
-        </Headers>
-      );
-    case "Guide":
-      return (
-        <div>
-
-        </div>
-      );
-    default:
-      return (
-        <Headers>
-          <HeaderDiv>
-            <HeaderItems>
-              <Image src={Logo} alt="Logo" width={60} height={50} />
-              <IconDiv>
-                <Image src={Search} alt="Search" width={24} height={24}/>
-                <Image src={Bell} alt="Bell" width={24} height={24}/>
-                <Image src={User} alt="User" width={24} height={24}/>
-              </IconDiv>
-            </HeaderItems>
-          </HeaderDiv>
-          <HeaderNavigaion />
-        </Headers>
-      );
-  }
-}

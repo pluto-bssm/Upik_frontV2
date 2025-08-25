@@ -13,6 +13,8 @@ import Domitory from '@/app/Images/Domitory.svg'
 import MakeSchool from '@/app/Images/MakeSchool.svg'
 import Humor from '@/app/Images/Humor.svg'
 import UnderBar from '@/app/Images/UnderBar.svg'
+import Plus from '@/app/Images/Plus.svg'
+
 
 export {
   Vote,
@@ -29,5 +31,6 @@ export {
   Domitory,
   MakeSchool,
   Humor,
-  UnderBar
+  UnderBar,
+  Plus
 }
