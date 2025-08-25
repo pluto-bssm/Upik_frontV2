@@ -74,6 +74,7 @@ export default function CategoryChoseBox({ category, isOpen, setIsOpen }: Props)
             {category === "유머" && <DesP>유머유머유머유머유머유머유머유머유머유머유머유머유머유머유머</DesP>}
         </div>
         
+        
     </CatogoryBox>
     </Appdiv>
   );
