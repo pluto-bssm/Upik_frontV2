@@ -8,7 +8,14 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 
-export default function Header() {
+
+
+type Props = {
+  isOpen?: boolean;
+  setIsOpen?: (isOpen: boolean) => void;
+};
+
+export default function Header({ isOpen, setIsOpen }: Props) {
   const pathname = usePathname();
   const page = pathname.replace("/", "");
 
@@ -17,12 +24,13 @@ export default function Header() {
   switch (page) {
     case "VoteMake":
       return (
+        
         <Headers>
           <VoteHeaderDiv>
             <HeaderItems>
               <VoteIconDiv>
                 <Image src={Back} alt="Search" width={24} height={24} onClick={() => {router.back()}}/>
-                <Image src={Close} alt="User" width={24} height={24} onClick={() => {router.replace("/")}}/>
+                <Image src={Close} alt="User" width={24} height={24} onClick={() => setIsOpen && setIsOpen(true)}/>
               </VoteIconDiv>
             </HeaderItems>
           </VoteHeaderDiv>
