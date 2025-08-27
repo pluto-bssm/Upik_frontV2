@@ -101,10 +101,13 @@ const Headers = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   max-width:600px;
   position: fixed;
 
   background-color : #FFFFFF;
+=======
+>>>>>>> 04950d89d7ebe063407461406947a471ec65ec50
 `
 
 const HeaderDiv = styled.div`
@@ -113,7 +116,11 @@ const HeaderDiv = styled.div`
   border-bottom: 1px solid #E6E6E6;
   height: 54px;
   width: 100%;
+<<<<<<< HEAD
 
+=======
+  position: sticky;
+>>>>>>> 04950d89d7ebe063407461406947a471ec65ec50
   top: 0;
   justify-content: space-between;
   padding: 0 24px;
@@ -155,6 +162,7 @@ const HeaderItems = styled.div`
   align-items: center;
 `
 
+<<<<<<< HEAD
 
 const VoteHeaderItems = styled.div`
   display: flex;
@@ -164,3 +172,49 @@ const VoteHeaderItems = styled.div`
   align-items: center;
   gap : 38%;
 `
+=======
+export default function Header() {
+  const pathname = usePathname();
+  const page = pathname.replace("/", "");
+
+  const router = useRouter();
+
+  switch (page) {
+    case "VoteMake":
+      return (
+        <Headers>
+          <VoteHeaderDiv>
+            <HeaderItems>
+              <VoteIconDiv>
+                <Image src={Back} alt="Search" width={24} height={24} onClick={() => {router.back()}}/>
+                <Image src={Close} alt="User" width={24} height={24} onClick={() => {router.replace("/")}}/>
+              </VoteIconDiv>
+            </HeaderItems>
+          </VoteHeaderDiv>
+        </Headers>
+      );
+    case "Guide":
+      return (
+        <div>
+
+        </div>
+      );
+    default:
+      return (
+        <Headers>
+          <HeaderDiv>
+            <HeaderItems>
+              <Image src={Logo} alt="Logo" width={60} height={50} />
+              <IconDiv>
+                <Image src={Search} alt="Search" width={24} height={24}/>
+                <Image src={Bell} alt="Bell" width={24} height={24}/>
+                <Image src={User} alt="User" width={24} height={24}/>
+              </IconDiv>
+            </HeaderItems>
+          </HeaderDiv>
+          <HeaderNavigaion />
+        </Headers>
+      );
+  }
+}
+>>>>>>> 04950d89d7ebe063407461406947a471ec65ec50

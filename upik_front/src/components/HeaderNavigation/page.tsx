@@ -8,7 +8,6 @@ import { useState } from 'react';
 import React from 'react';
 
 
-
 const navs = ['전체', '학교생활', '기숙사', '유머'];
 
 
