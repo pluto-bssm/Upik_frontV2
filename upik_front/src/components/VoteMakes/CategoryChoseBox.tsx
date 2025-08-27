@@ -2,7 +2,7 @@ import React from "react";
 
 import styled from '@emotion/styled'
 import Image from 'next/image';
-import { UnderBar } from "../app/Library/Images";
+import { UnderBar } from "../../app/Library/Images";
 
 
 type Props = {

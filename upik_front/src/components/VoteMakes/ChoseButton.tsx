@@ -4,10 +4,17 @@ import Image from 'next/image'
 import { Plus } from '@/app/Library/Images'
 
 
-export default function ChoseButton() {
+import { useRouter } from "next/navigation";
+
+export default function ChoseButton( ) {
+
+  const router = useRouter();
+
+
+
   return (
     <ButtonDiv>
-        <Button>
+        <Button onClick={() => router.push(`/choseEdit`)}>
             <Image src={Plus} alt="plus" />
             <p>투표 제작하기</p>
         </Button>
@@ -24,7 +31,7 @@ align-items: center;
 
 const Button = styled.button`
     width: 90%;
-    height: 60px;
+    height: 54px;
     background: #FF9F1C;
     border: none;
     border-radius: 32px;

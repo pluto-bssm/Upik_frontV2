@@ -7,7 +7,7 @@ import { Home, Vote, Guide, Dashboard } from '@/app/Library/Images';
 
 const navs = [
   { name: "Home", path: "/" , icon: Home },
-  { name: "VoteMake", path: "/VoteMake", icon: Vote },
+  { name: "votemake", path: "/votemake", icon: Vote },
   { name: "Guide", path: "/Guide", icon: Guide },
   { name: "Shop", path: "/Shop", icon: Dashboard },
 ];
@@ -17,9 +17,22 @@ export default function NavigationBar() {
     const pathname = usePathname();
     const page = pathname.replace("/", "");
 
+    console.log(page);
 
     switch (page) {
-        case "VoteMake":
+        case "votemake":
+          return (
+            <div>
+
+            </div>
+          );
+        case "choseEdit":
+          return (
+            <div>
+
+            </div>
+          );
+        case "choseEdit/options":
           return (
             <div>
 

@@ -14,6 +14,9 @@ import MakeSchool from '@/app/Images/MakeSchool.svg'
 import Humor from '@/app/Images/Humor.svg'
 import UnderBar from '@/app/Images/UnderBar.svg'
 import Plus from '@/app/Images/Plus.svg'
+import Options from '@/app/Images/Options.svg' 
+import Nexts from '@/app/Images/Nexts.svg' 
+
 
 
 export {
@@ -32,5 +35,7 @@ export {
   MakeSchool,
   Humor,
   UnderBar,
-  Plus
+  Plus,
+  Options,
+  Nexts
 }

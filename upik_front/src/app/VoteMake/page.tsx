@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 
 import styled from '@emotion/styled'
-import GuideCategoryImage from "@/components/GuideCategoryImage";
-import GuideCategoryText from "@/components/GuideCategoryText";
-import CategoryChoseBox from "@/components/CategoryChoseBox";
+import GuideCategoryImage from "@/components/VoteMakes/GuideCategoryImage";
+import GuideCategoryText from "@/components/VoteMakes/GuideCategoryText";
+import CategoryChoseBox from "@/components/VoteMakes/CategoryChoseBox";
 import CategoryChose from "@/components/Modal/CategoryChose";
-import ChoseButton from "@/components/ChoseButton";
+import ChoseButton from "@/components/VoteMakes/ChoseButton";
 
-export default function VoteMakePage() {
+export default function VoteMake() {
   const [GuideCategory, setGuideCategory] = useState('학교생활');
   const [isOpen , setIsOpen] = useState(false);
 
