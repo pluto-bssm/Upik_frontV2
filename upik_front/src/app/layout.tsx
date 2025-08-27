@@ -11,6 +11,7 @@ const DynamicStyledComponents = dynamic(
   () => import("@/components/StyledComponents"),
   { 
     ssr: false,
+    
     loading: () => (
       <div style={{
         width: '100%',
