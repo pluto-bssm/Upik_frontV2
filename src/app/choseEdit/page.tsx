@@ -95,7 +95,6 @@ const BallotForm = styled.div`
 
 const AddButton = styled.div`
   cursor: pointer;
-  color: #007bff;
   font-weight: 500;
   padding: 8px 8px;
   border-radius: 50%;

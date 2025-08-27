@@ -40,7 +40,7 @@ export default function Ballot({
 const CountDiv = styled.div`
     background-color : #E6E6E6;
     width : 40px;
-    height : 30px;
+    height : 40px;
 
     display : flex;
 
@@ -82,7 +82,7 @@ const Container = styled.div`
 
   border-radius : 16px;
 
-  padding :16px 20px;
+  padding :12px 20px;
 
   border : 1px solid #B3B3B3;
   
